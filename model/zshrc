@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 umask g=rwx,o=rx
 
 # Load dotfiles
-for file in ~/Spikes/dotfiles/.{alias,export,functions}.zsh; do
+for file in ~/Spikes/dotfiles/.{alias,export,functions,local}.zsh; do
   [ -r "$file" ] && source "$file"
 done
 unset file
