@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 def green text
-  "\e[32m#{text}\e[0m"
+  puts "\e[32m#{text}\e[0m"
 end
 
 green 'Deploying dotfiles...'
