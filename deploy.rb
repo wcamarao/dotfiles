@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'fileutils'
+
 def green text
   puts "\e[32m#{text}\e[0m"
 end
@@ -16,13 +18,14 @@ green 'Copying pathogen.vim into vim/autoload...'
 
 green 'Cleaning up existing local resources...'
 dotfiles.each do |entry|
-  `touch ~/.#{entry}`
+  FileUtils.touch "~/.#{entry}" rescue nil
   `rm -ir ~/.#{entry}`
 end
 
 green 'Creating symbolic links...'
+pwd = `pwd`.split.first
 dotfiles.each do |entry|
-  `ln -isv model/#{entry} ~/.#{entry}`
+  `ln -isv #{pwd}/model/#{entry} ~/.#{entry}`
 end
 
 green 'Done.'
