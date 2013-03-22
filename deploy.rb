@@ -8,7 +8,8 @@ dotfiles = `ls model`.split
 `git submodule update`
 
 # Copy pathogen.vim into vim/autoload
-`cp -i model/vim/bundle/vim-pathogen/autoload/pathogen.vim model/vim/autoload`
+`mkdir -p model/vim/autoload`
+`cp -i model/vim/bundle/vim-pathogen/autoload/pathogen.vim model/vim/autoload/pathogen.vim`
 
 # Clean up existing local resources
 dotfiles.each do |entry|
