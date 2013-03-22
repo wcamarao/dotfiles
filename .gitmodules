@@ -7,6 +7,9 @@
 [submodule "model/vim/bundle/YouCompleteMe"]
 	path = model/vim/bundle/YouCompleteMe
 	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "model/vim/bundle/vim-gitgutter"]
+	path = model/vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
 [submodule "model/vim/bundle/vim-ruby-debugger"]
 	path = model/vim/bundle/vim-ruby-debugger
 	url = git://github.com/astashov/vim-ruby-debugger.git

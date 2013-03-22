@@ -148,18 +148,3 @@ if has('gui_macvim')
   highlight clear SignColumn
 
 endif
-
-" Bundle: ervandew/supertab
-" Bundle: kchmck/vim-coffee-script
-" Bundle: scrooloose/nerdtree
-" Bundle: tpope/vim-cucumber
-" Bundle: tpope/vim-fugitive
-" Bundle: tpope/vim-surround
-" Bundle: vim-scripts/jQuery
-" Bundle: vim-scripts/matchit.zip
-" Bundle: vim-scripts/snipMate
-" Bundle: vim-scripts/Rainbow-Parenthsis-Bundle
-" Bundle: vim-scripts/rails
-" -Bundle: git://github.com/astashov/vim-ruby-debugger.git
-" Bundle: git://git.wincent.com/command-t.git
-" Bundle: git://github.com/bbommarito/vim-slim.git

@@ -1,23 +1,28 @@
 #!/usr/bin/env ruby
+def green text
+  "\e[32m#{text}\e[0m"
+end
 
-# Deployables
+green 'Deploying dotfiles...'
 dotfiles = `ls model`.split
 
-# Init and update submodules
+green 'Initializing and updating submodules...'
 `git submodule init`
 `git submodule update`
 
-# Copy pathogen.vim into vim/autoload
+green 'Copying pathogen.vim into vim/autoload...'
 `mkdir -p model/vim/autoload`
 `cp -i model/vim/bundle/vim-pathogen/autoload/pathogen.vim model/vim/autoload/pathogen.vim`
 
-# Clean up existing local resources
+green 'Cleaning up existing local resources...'
 dotfiles.each do |entry|
   `touch ~/.#{entry}`
   `rm -ir ~/.#{entry}`
 end
 
-# Create symbolic links
+green 'Creating symbolic links...'
 dotfiles.each do |entry|
   `ln -isv model/#{entry} ~/.#{entry}`
 end
+
+green 'Done.'
