@@ -1,5 +1,4 @@
 set nocompatible
-"call pathogen#runtime_append_all_bundles()
 call pathogen#incubate()
 call pathogen#helptags()
 filetype on
@@ -12,7 +11,7 @@ if has('gui_macvim')
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1
 
-  "let g:ruby_debugger_no_maps = 1
+  let g:ruby_debugger_no_maps = 1
   "let g:ruby_debugger_debug_mode = 1
   "let g:ruby_debugger_progname = 'mvim'
   "let g:ruby_debugger_default_script = 'script/rails s'
@@ -77,22 +76,22 @@ if has('gui_macvim')
   nnoremap ; :
   cmap cwd lcd %:p:h
   nmap <Esc> :nohlsearch<CR>:<CR>
-  nmap <silent> <Leader>] :CommandT<CR>
-  nmap <silent> <Leader>[ :CommandTFlush<CR>
+  nmap <silent> <Leader>] :CtrlP<CR>
+  nmap <silent> <Leader>[ :CtrlPClearCache<CR>
   nmap <silent> <Leader>t :NERDTreeToggle<CR>
 
   "format json
   nmap <silent> <Leader>j :%!python -m json.tool<CR>
 
   "tabs navigation
-  nmap <D-A-Left> :tabprevious<CR>
-  nmap <D-A-Right> :tabnext<CR>
+  nmap <D-S-Left> :tabprevious<CR>
+  nmap <D-S-Right> :tabnext<CR>
 
   "splits navigation
-  nmap <silent> <D-S-Up> :wincmd k<CR>
-  nmap <silent> <D-S-Down> :wincmd j<CR>
-  nmap <silent> <D-S-Left> :wincmd h<CR>
-  nmap <silent> <D-S-Right> :wincmd l<CR>
+  nmap <silent> <D-A-Up> :wincmd k<CR>
+  nmap <silent> <D-A-Down> :wincmd j<CR>
+  nmap <silent> <D-A-Left> :wincmd h<CR>
+  nmap <silent> <D-A-Right> :wincmd l<CR>
 
   "create empty split related to the current one
   nmap <Leader><left>  :leftabove  vnew<CR>
