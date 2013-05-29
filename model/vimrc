@@ -1,12 +1,13 @@
 set nocompatible
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 filetype on
 syntax on
 
 if has('gui_macvim')
 
-  cd ~/Spikes/upstream
+  cd ~/Projects
 
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1
