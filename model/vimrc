@@ -46,7 +46,7 @@ if has('gui_macvim')
   set nospell                       " no spell checking
   set wrap!                         " no word wrapping
 
-  set virtualedit=all               " allow the cursor to go in to "invalid" places
+  set virtualedit=all               " allow the cursor to go in to 'invalid' places
   set backspace=indent,eol,start    " allow backspacing over everything in insert mode
   set iskeyword+=_,$,@,%,#          " none of these are word dividers
   set ttimeoutlen=50                " make Esc key faster
@@ -65,7 +65,7 @@ if has('gui_macvim')
   set shiftround                    " use multiple of shiftwidth when indenting with '<' and '>'
 
   set noignorecase                  " do not ignore case when searching
-  set nogdefault                    " do not search/replace "globally" (on a line) by default
+  set nogdefault                    " do not search/replace 'globally' (on a line) by default
   set smartcase                     " ignore case if search pattern is all lowercase, case-sensitive otherwise
   set hlsearch                      " highlight search terms
   set incsearch                     " show search matches as you type
@@ -73,27 +73,36 @@ if has('gui_macvim')
   set wildmode=list:longest,full    " command <Tab> completion, list matches, then longest common part, then all
   set showtabline=2                 " always show tabs
 
-  nnoremap ; :
   cmap cwd lcd %:p:h
-  nmap <Esc> :nohlsearch<CR>:<CR>
-  nmap <silent> <Leader>] :CtrlP<CR>
-  nmap <silent> <Leader>[ :CtrlPClearCache<CR>
+  nmap <silent> <Leader>b :CtrlPBuffer<CR>
   nmap <silent> <Leader>t :NERDTreeToggle<CR>
 
-  "format json
+  "quicker access to input commands
+  nnoremap ; :
+
+  "escape key cleans search highlights
+  nmap <Esc> :nohlsearch<CR>:<CR>
+
+  "quick access to ctrl-p (aka \])
+  nmap <silent> <Leader>] :CtrlP<CR>
+
+  "quick access to clear ctrl-p cache (aka \[)
+  nmap <silent> <Leader>[ :CtrlPClearCache<CR>
+
+  "format json (leader + j)
   nmap <silent> <Leader>j :%!python -m json.tool<CR>
 
-  "tabs navigation
+  "tabs navigation (cmd + shift + arrows)
   nmap <D-S-Left> :tabprevious<CR>
   nmap <D-S-Right> :tabnext<CR>
 
-  "splits navigation
+  "splits navigation (cmd + alt + arrows)
   nmap <silent> <D-A-Up> :wincmd k<CR>
   nmap <silent> <D-A-Down> :wincmd j<CR>
   nmap <silent> <D-A-Left> :wincmd h<CR>
   nmap <silent> <D-A-Right> :wincmd l<CR>
 
-  "create empty split related to the current one
+  "create empty split related to the current one (leader + arrows)
   nmap <Leader><left>  :leftabove  vnew<CR>
   nmap <Leader><right> :rightbelow vnew<CR>
   nmap <Leader><up>    :leftabove  new<CR>
@@ -107,25 +116,13 @@ if has('gui_macvim')
   nmap g* g*zz
   nmap g# g#zz
 
-  "move visual block up/down
+  "move visual block (ctrl + alt + up/down)
   vmap <C-A-up> xkP'[V']
   vmap <C-A-down> xp'[V']
 
-  "move line up/down
+  "move line up/down (ctrl + alt + up/down)
   nmap <C-A-up> :call g:MoveLineUp()<CR>
   nmap <C-A-down> :call g:MoveLineDown()<CR>
-
-  "vim-ruby-debugger - not working yet
-  "nmap <C-S-b> :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.toggle_breakpoint()<CR>
-  "nmap <leader>v  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_variables()<CR>
-  "nmap <leader>m  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_breakpoints()<CR>
-  "nmap <leader>t  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
-  "nmap <leader>s  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.step()<CR>
-  "nmap <leader>f  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.finish()<CR>
-  "nmap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
-  "nmap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.continue()<CR>
-  "nmap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
-  "nmap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
 
   function! g:MoveLineUp()
     if &modifiable
@@ -139,12 +136,20 @@ if has('gui_macvim')
     endif
   endfunction
 
+  "vim-ruby-debugger - not working yet
+  "nmap <C-S-b> :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.toggle_breakpoint()<CR>
+  "nmap <leader>v  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_variables()<CR>
+  "nmap <leader>m  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_breakpoints()<CR>
+  "nmap <leader>t  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
+  "nmap <leader>s  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.step()<CR>
+  "nmap <leader>f  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.finish()<CR>
+  "nmap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
+  "nmap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.continue()<CR>
+  "nmap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
+  "nmap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
+
   "ignore F1
   inoremap <F1> <ESC>
   nnoremap <F1> <ESC>
   vnoremap <F1> <ESC>
-
-  "fix sign column color (vim-gitgutter)
-  highlight clear SignColumn
-
 endif

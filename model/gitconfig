@@ -3,7 +3,7 @@
   pager = less -+$LESS -FRX
 [user]
   name = Wagner Camarao
-  email = functioncallback@gmail.com
+  email = wagner@camarao.io
 [color]
   ui = auto
   interactive = auto
@@ -13,12 +13,12 @@
   co = checkout
   dc = diff --word-diff=color --cached
   df = diff --word-diff=color
-  fr = !git fetch && git rebase origin/master
+  dt = diff-tree --no-commit-id --name-only -r
+  fr = !git fetch --all && git rebase crunchbase/master
   gp = grep --break --heading
   lg = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%cr%Creset %Cblue%an%Creset%C(yellow)%d%Creset %s'
   ls = log --stat
   sl = shortlog -sn
   st = status -sb
-  unadd = reset HEAD
 [grep]
   lineNumber = true
