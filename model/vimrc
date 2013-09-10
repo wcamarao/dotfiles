@@ -78,7 +78,7 @@ if has('gui_macvim')
 
   cmap cwd lcd %:p:h
   nmap <silent> <Leader>b :CtrlPBuffer<CR>
-  nmap <silent> <Leader>t :NERDTreeToggle<CR>
+  nmap <silent> <Leader>t :call g:WorkaroundNERDTreeToggle()<CR>
 
   "quicker access to input commands
   nnoremap ; :
@@ -140,6 +140,10 @@ if has('gui_macvim')
     if &modifiable
       normal ddp
     endif
+  endfunction
+
+  function! g:WorkaroundNERDTreeToggle()
+    try | :NERDTreeToggle | catch | :NERDTree | endtry
   endfunction
 
   "vim-ruby-debugger - not working yet
