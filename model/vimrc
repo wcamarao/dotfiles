@@ -11,6 +11,9 @@ if has('gui_macvim')
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1
 
+  au BufRead,BufNewFile *.go set filetype=go
+  autocmd Filetype go setlocal ts=4 sts=4 sw=4 et!
+
   let g:ruby_debugger_no_maps = 1
   "let g:ruby_debugger_debug_mode = 1
   "let g:ruby_debugger_progname = 'mvim'
@@ -88,6 +91,9 @@ if has('gui_macvim')
 
   "quick access to clear ctrl-p cache (aka \[)
   nmap <silent> <Leader>[ :CtrlPClearCache<CR>
+
+  "format Go code (leader + f)
+  nmap <silent> <Leader>f :1,$d<CR>:r !gofmt %<CR>:1<CR>:d<CR>
 
   "format json (leader + j)
   nmap <silent> <Leader>j :%!python -m json.tool<CR>
