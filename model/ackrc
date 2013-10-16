@@ -1,0 +1,17 @@
+--type-set=coffee=.coffee
+--type-set=slim=.slim
+--type-set=sass=.sass
+--type-set=minifiedjs=.min.js
+--nominifiedjs
+
+--ignore-dir=coverage
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=.sass-cache
+--ignore-dir=vendor
+
+--ignore-file=ext:bak
+--ignore-file=ext:pdf
+
+# vi/vim swap files
+--ignore-file=match:/[._].*\.swp$/
