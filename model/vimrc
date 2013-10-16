@@ -98,6 +98,9 @@ if has('gui_macvim')
   "format json (leader + j)
   nmap <silent> <Leader>j :%!python -m json.tool<CR>
 
+  "close all open buffers
+  nmap <silent> <Leader>x :bd *<C-a><CR>
+
   "tabs navigation (cmd + shift + arrows)
   nmap <D-S-Left> :tabprevious<CR>
   nmap <D-S-Right> :tabnext<CR>
