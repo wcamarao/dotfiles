@@ -26,3 +26,6 @@ for file in ~/.{alias,export,functions,local}.zsh; do
   [ -r "$file" ] && source "$file"
 done
 unset file
+
+# No confirmation for rm *
+setopt rmstarsilent
