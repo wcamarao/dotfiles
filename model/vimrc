@@ -11,6 +11,7 @@ if has('gui_macvim')
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1
 
+  au BufReadPost *.erb set syntax=html
   au BufRead,BufNewFile *.go set filetype=go
   autocmd Filetype go setlocal ts=4 sts=4 sw=4 et!
 
@@ -35,8 +36,8 @@ if has('gui_macvim')
   hi cursorcolumn guibg=#222222
 
   set number                        " show line numbers
-  set wildignore+=node_modules      " ignores node_modules
-  set wildignore+=assets/static/img " ignores node_modules
+  set wildignore+=**/node_modules   " ignores node_modules
+  set wildignore+=**/spec/reports   " ignores spec/reports
   set ruler                         " show current position
   set showmode                      " show what mode we're currently editing in
   set showmatch                     " show matching brackets
