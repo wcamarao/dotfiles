@@ -14,9 +14,10 @@
   dc = diff --word-diff=color --cached
   df = diff --word-diff=color
   dt = diff-tree --no-commit-id --name-only -r
-  fr = !git fetch --all && git rebase crunchbase/master
+  fr = !git fetch --all && git rebase crunchbase/develop
   gp = grep --break --heading
   lg = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%cr%Creset %Cblue%an%Creset%C(yellow)%d%Creset %s'
+  lt = !git lg | head
   ls = log --stat
   sl = shortlog -sn
   st = status -sb
