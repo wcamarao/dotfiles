@@ -29,3 +29,6 @@ unset file
 
 # No confirmation for rm *
 setopt rmstarsilent
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

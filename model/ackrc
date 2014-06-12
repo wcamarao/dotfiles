@@ -9,6 +9,7 @@
 --ignore-dir=tmp
 --ignore-dir=.sass-cache
 --ignore-dir=vendor
+--ignore-dir=migrations
 
 --ignore-file=ext:bak
 --ignore-file=ext:pdf

@@ -1,10 +1,9 @@
 alias vim='mvim '
-alias sudo='sudo '
+alias sudo='nocorrect sudo'
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-alias guard='be guard '
-alias ks='karma start'
+alias guard='be guard'
 alias be='noglob bundle exec'
 alias rake='noglob bundle exec rake'
