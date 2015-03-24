@@ -3,7 +3,7 @@ function seek() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
   else
-    ps ax |grep $1 |grep -v "grep $1"
+    ps ax |grep $1 |grep -v "grep .* $1"
   fi
 }
 
@@ -12,7 +12,7 @@ function kall() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
   else
-    ps ax |grep $1 |grep -v "grep $1" |awk {'print "kill "$1'} |sh
+    ps ax |grep $1 |grep -v "grep .* $1" |awk {'print "kill "$1'} |sh
   fi
 }
 
