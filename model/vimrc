@@ -20,7 +20,7 @@ if has('gui_macvim')
   "let g:ruby_debugger_progname = 'mvim'
   "let g:ruby_debugger_default_script = 'script/rails s'
 
-  colorscheme macvim
+  colorscheme spacegray
   set background=dark
   set gfn=Monaco:h14
 
@@ -38,6 +38,7 @@ if has('gui_macvim')
   set number                        " show line numbers
   set wildignore+=**/node_modules   " ignores node_modules
   set wildignore+=**/spec/reports   " ignores spec/reports
+  set wildignore+=**/tmp/cache      " ignores tmp/cache
   set wildignore+=*.pyc             " ignores *.pyc
   set ruler                         " show current position
   set showmode                      " show what mode we're currently editing in
