@@ -1,4 +1,4 @@
-ZSH=$HOME/.oh-my-zsh
+export ZSH=/Users/wcamarao/.oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, set this to "random"
@@ -9,17 +9,21 @@ ZSH_THEME="simple"
 # export UPDATE_ZSH_DAYS=13
 # DISABLE_LS_COLORS="true"
 # DISABLE_AUTO_TITLE="true"
+# ENABLE_CORRECTION="true"
 # COMPLETION_WAITING_DOTS="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# HIST_STAMPS="mm/dd/yyyy"
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins? (can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git brew ruby rails bundler gem)
 
+# Path
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# Set default permissions
-umask g=rwx,o=rx
 
 # Load dotfiles
 for file in ~/.{alias,export,functions,local}.zsh; do
@@ -27,8 +31,18 @@ for file in ~/.{alias,export,functions,local}.zsh; do
 done
 unset file
 
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# Set default permissions
+umask g=rwx,o=rx
+
 # No confirmation for rm *
 setopt rmstarsilent
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
