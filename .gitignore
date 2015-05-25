@@ -1,2 +1,2 @@
-/model/vim/autoload/pathogen.vim
-/model/vim/.netrwhist
+/model/vim/autoload/*
+/model/vim/bundle/*

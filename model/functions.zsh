@@ -24,7 +24,7 @@ function listpath () {
 }
 
 # Determine size of a file or total size of a directory
-function fs() {
+function sizeof() {
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh
   else
@@ -38,7 +38,7 @@ function fs() {
 }
 
 # Serve a directory via http, optionally specifying the port
-function server() {
+function pyserv() {
   local port="${1:-8000}"
   open "http://localhost:${port}/" &
   python -m SimpleHTTPServer ${port}

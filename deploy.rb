@@ -5,27 +5,29 @@ def green text
   puts "\e[32m#{text}\e[0m"
 end
 
-green 'Deploying dotfiles...'
+green 'Deploying dotfiles'
 dotfiles = `ls model`.split
 
-green 'Initializing and updating submodules...'
-`git submodule init`
-`git submodule update`
+green 'Downloading pathogen.vim into model/vim/autoload'
+`curl -LSso model/vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
 
-green 'Copying pathogen.vim into vim/autoload...'
-`mkdir -p model/vim/autoload`
-`cp -i model/vim/bundle/vim-pathogen/autoload/pathogen.vim model/vim/autoload/pathogen.vim`
-
-green 'Cleaning up existing local resources...'
-dotfiles.each do |entry|
-  FileUtils.touch "~/.#{entry}" rescue nil
-  `rm -ir ~/.#{entry}`
+green 'Downloading vim modules into model/vim/bundle'
+`cat .vimbundle`.split.each do |repo|
+  green repo
+  FileUtils.cd('model/vim/bundle') { `git clone #{repo}` }
 end
 
-green 'Creating symbolic links...'
-pwd = `pwd`.split.first
+green 'Moving existing dotfiles to ~/dotfiles.old/'
+`mkdir -v ~/dotfiles.old`
 dotfiles.each do |entry|
-  `ln -isv #{pwd}/model/#{entry} ~/.#{entry}`
+  FileUtils.touch("~/.#{entry}") rescue nil
+  `mv -iv ~/.#{entry} ~/dotfiles.old/`
 end
 
-green 'Done.'
+green 'Creating symbolic links to new dotfiles'
+pwd = `pwd`.strip
+dotfiles.each do |entry|
+  `ln -ivs #{pwd}/model/#{entry} ~/.#{entry}`
+end
+
+green 'Done'

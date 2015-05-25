@@ -14,5 +14,4 @@
 --ignore-file=ext:bak
 --ignore-file=ext:pdf
 
-# vi/vim swap files
 --ignore-file=match:/[._].*\.swp$/

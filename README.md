@@ -1,8 +1,17 @@
 dotfiles
 ========
 
-Environment: osx, oh-my-zsh, vim, git, ruby, js, web, vim bundles as submodules.
+* osx
+* zsh
+* vim
+* git
+* ruby
+* python
+* golang
+* javascript
+* typescript
+* html5
+* sass
+* less
 
     $ ruby deploy.rb
-
-MIT License: http://functioncallback.mit-license.org
