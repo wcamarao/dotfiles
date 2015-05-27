@@ -96,6 +96,10 @@ if has('gui_macvim')
   "close all open buffers
   nmap <silent> <Leader>x :bd *<C-a><CR>
 
+  "open projects/go workspaces
+  nmap <silent> <Leader>p :cd ~/Projects<CR>:NERDTree<CR>
+  nmap <silent> <Leader>g :cd ~/Projects/go/src/github.com/wcamarao<CR>:NERDTree<CR>
+
   "tabs navigation (cmd + shift + arrows)
   nmap <D-S-Left> :tabprevious<CR>
   nmap <D-S-Right> :tabnext<CR>
