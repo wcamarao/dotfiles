@@ -7,9 +7,6 @@ if has('gui_macvim')
 
   cd ~/Projects
 
-  let NERDTreeDirArrows=1
-  let NERDTreeShowHidden=1
-
   au BufReadPost *.erb set syntax=html
   au BufReadPost *.ejs set syntax=html
 
@@ -23,6 +20,15 @@ if has('gui_macvim')
   hi cursorline   guibg=#222222
   hi cursorcolumn guibg=#222222
 
+  "nerd tree
+  let NERDTreeDirArrows=1
+  let NERDTreeShowHidden=1
+
+  "nerd commenter
+  let NERDSpaceDelims=1
+  let NERDCommentEmptyLines=1 "https://github.com/scrooloose/nerdcommenter/pull/193
+
+  "MacVim
   set guioptions-=l
   set guioptions-=r
   set guioptions-=L
@@ -84,11 +90,20 @@ if has('gui_macvim')
   "ctrl-p buffer (leader + b)
   nmap <silent> <Leader>b :CtrlPBuffer<CR>
 
-  "ctrl-p clear cache & open (leader + ])
-  nmap <silent> <Leader>] :CtrlPClearCache<CR>:CtrlP<CR>
+  "ctrl-p clear cache (leader + [)
+  nmap <silent> <Leader>[ :CtrlPClearCache<CR>
 
-  "nerd tree toggle (leader + [)
-  nmap <silent> <Leader>[ :NERDTreeToggle<CR>
+  "ctrl-p open (leader + ])
+  nmap <silent> <Leader>] :CtrlP<CR>
+
+  "toggle tree (leader + t)
+  noremap <silent> <D-\> :NERDTreeToggle<CR>
+
+  "comment (cmd + ])
+  noremap <silent> <D-]> :call NERDComment(0, "alignBoth")<CR>
+
+  "uncomment (cmd + [)
+  noremap <silent> <D-[> :call NERDComment(0, "uncomment")<CR>
 
   "format json (leader + j)
   nmap <silent> <Leader>j :%!python -m json.tool<CR>

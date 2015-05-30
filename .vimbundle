@@ -11,6 +11,7 @@ git@github.com:kien/ctrlp.vim.git
 git@github.com:leafgarland/typescript-vim.git
 git@github.com:othree/html5.vim.git
 git@github.com:pangloss/vim-javascript.git
+git@github.com:scrooloose/nerdcommenter.git
 git@github.com:scrooloose/nerdtree.git
 git@github.com:slim-template/vim-slim.git
 git@github.com:tpope/vim-cucumber.git

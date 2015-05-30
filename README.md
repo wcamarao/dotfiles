@@ -12,6 +12,5 @@ dotfiles
 * typescript
 * html5
 * sass
-* less
 
-    $ ruby deploy.rb
+        $ ruby deploy.rb
