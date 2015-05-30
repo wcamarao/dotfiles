@@ -1,16 +1,16 @@
-dotfiles
-========
+# dotfiles
 
-* osx
 * zsh
-* vim
 * git
+* vim
+* golang
 * ruby
 * python
-* golang
 * javascript
 * typescript
 * html5
 * sass
+
+### Setup
 
         $ ruby deploy.rb
