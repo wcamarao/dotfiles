@@ -97,7 +97,7 @@ if has('gui_macvim')
   nmap <silent> <Leader>] :CtrlP<CR>
 
   "toggle tree (leader + t)
-  noremap <silent> <D-\> :NERDTreeToggle<CR>
+  nmap <silent> <D-\> :call g:WorkaroundNERDTreeToggle()<CR>
 
   "comment (cmd + ])
   noremap <silent> <D-]> :call NERDComment(0, "alignBoth")<CR>
@@ -150,6 +150,10 @@ if has('gui_macvim')
   "move current line up/down (shift + up|down)
   nmap <S-up> :call g:MoveLineUp()<CR>
   nmap <S-down> :call g:MoveLineDown()<CR>
+
+  function! g:WorkaroundNERDTreeToggle()
+    try | NERDTreeToggle | catch | silent! NERDTree | endtry
+  endfunction
 
   function! g:MoveLineUp()
     if &modifiable
