@@ -23,7 +23,7 @@ git@github.com:tpope/vim-rails.git
 git@github.com:tpope/vim-rbenv.git
 git@github.com:tpope/vim-repeat.git
 git@github.com:tpope/vim-surround.git
-git@github.com:tsaleh/vim-matchit.git
+git@github.com:vim-scripts/matchit.zip.git
 git@github.com:vim-ruby/vim-ruby.git
 git@github.com:vim-scripts/IndexedSearch.git
 git@github.com:vim-scripts/jQuery.git
