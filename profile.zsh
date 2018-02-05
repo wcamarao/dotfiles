@@ -1,9 +1,20 @@
-# Seek all matching processes by name
+# nocorrect
+# noglob
+
+export EDITOR="vim"
+export MANPAGER="less -X"
+export ZSH_THEME="simple"
+
+alias json='python -m json.tool'
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
+
+# List all matching processes by name
 function seek() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
   else
-    ps ax |grep $1 |grep -v "grep .* $1"
+    ps ax |grep $1 |grep -v "grep.* $1" |grep $1
   fi
 }
 
@@ -12,11 +23,11 @@ function kall() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
   else
-    ps ax |grep $1 |grep -v "grep .* $1" |awk {'print "kill "$1'} |sh
+    ps ax |grep $1 |grep -v "grep.* $1" |awk {'print "kill "$1'} |sh
   fi
 }
 
-# List path entries (split by \n)
+# List all path entries
 function listpath () {
   for line in ${PATH//:/$'\n'}; do
     echo $line
@@ -38,8 +49,8 @@ function sizeof() {
 }
 
 # Serve a directory via http, optionally specifying the port
-function pyserv() {
-  local port="${1:-8000}"
+function server() {
+  local port="${1:-3000}"
   open "http://localhost:${port}/" &
   python -m SimpleHTTPServer ${port}
 }
