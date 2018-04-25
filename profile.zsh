@@ -8,6 +8,8 @@ export ZSH_THEME="simple"
 alias json='python -m json.tool'
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
+alias pg='docker exec -it $(docker ps -a -f name=postgres --no-trunc -q) bash -c "psql -U postgres"'
+alias redis='docker exec -it $(docker ps -a -f name=redis --no-trunc -q) bash -c "redis-cli"'
 
 # List all matching processes by name
 function seek() {
@@ -54,3 +56,4 @@ function server() {
   open "http://localhost:${port}/" &
   python -m SimpleHTTPServer ${port}
 }
+

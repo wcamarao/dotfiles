@@ -21,3 +21,4 @@
   ls = log --stat
   sl = shortlog -sn
   st = status -sb
+
