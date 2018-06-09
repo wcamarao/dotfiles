@@ -24,16 +24,16 @@ alias urlen='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1
 alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
 
 # projects
+alias cdc='cd $GOPATH/src/github.com/curated'
 alias cdp='cd $HOME/Projects'
+alias cdw='cd $GOPATH/src/github.com/wcamarao'
 alias pg='docker exec -it $(docker ps -a -f name=postgres --no-trunc -q) bash -c "psql -U postgres"'
 alias redis='docker exec -it $(docker ps -a -f name=redis --no-trunc -q) bash -c "redis-cli"'
 
 # dv
 export VAULT_ADDR='http://127.0.0.1:8200'
 alias cdl='cd $GOPATH/src/gitlab.com/lodg'
-alias cdt='cd $GOPATH/src/github.com/wcamarao/throttler'
 eval "$(direnv hook zsh)"
-cdl
 
 # list matching processes by name
 function seek() {
