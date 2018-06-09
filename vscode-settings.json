@@ -1,0 +1,35 @@
+{
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": false,
+  "files.trimTrailingWhitespace": true,
+  "html.format.endWithNewline": true,
+  "python.formatting.provider": "none",
+  "window.zoomLevel": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.list.openMode": "doubleClick",
+  "workbench.startupEditor": "newUntitledFile",
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "files.exclude": {
+    "**/bower_components": true,
+    "**/node_modules": true,
+    "**/vendor": true
+  },
+  "protoc": {
+    "path": "/usr/local/bin/protoc",
+    "options": ["--proto_path=${workspaceRoot}/common/proto"]
+  },
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/node_modules": true,
+    "**/vendor": true
+  }
+}
