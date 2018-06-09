@@ -16,9 +16,9 @@
   dt = diff-tree --no-commit-id --name-only -r
   fr = !git fetch --all && git rebase origin/master
   gp = grep --break --heading
+  ln = !git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr
   lg = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%cr%Creset %Cblue%an%Creset%C(yellow)%d%Creset %s'
   lt = !git lg | head
   ls = log --stat
   sl = shortlog -sn
   st = status -sb
-
