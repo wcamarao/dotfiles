@@ -3,15 +3,38 @@
 
 export EDITOR="vim"
 export MANPAGER="less -X"
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# zsh
 export ZSH_THEME="simple"
 
+# iterm directory pane titles
+export DISABLE_AUTO_TITLE=true
+precmd() {
+  echo -ne "\033];${PWD##*/}\007"
+}
+
+# utils
+alias g=git
 alias json='python -m json.tool'
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlen='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
+
+# curated
 alias pg='docker exec -it $(docker ps -a -f name=postgres --no-trunc -q) bash -c "psql -U postgres"'
 alias redis='docker exec -it $(docker ps -a -f name=redis --no-trunc -q) bash -c "redis-cli"'
 
-# List all matching processes by name
+# dv
+export VAULT_ADDR='http://127.0.0.1:8200'
+alias cdl='cd /Users/camarao_wagner/go/src/gitlab.com/lodg'
+alias cdt='cd /Users/camarao_wagner/go/src/github.com/wcamarao/throttler'
+eval "$(direnv hook zsh)"
+cdl
+
+# list matching processes by name
 function seek() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
@@ -20,7 +43,7 @@ function seek() {
   fi
 }
 
-# Kill all matching processes by name
+# kill matching processes by name
 function kall() {
   if [ "$#" -ne 1 ]; then
     echo "usage: $0 [pattern]"
@@ -29,14 +52,14 @@ function kall() {
   fi
 }
 
-# List all path entries
+# list path entries
 function listpath () {
   for line in ${PATH//:/$'\n'}; do
     echo $line
   done
 }
 
-# Determine size of a file or total size of a directory
+# determine size of file or directory
 function sizeof() {
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh
@@ -50,7 +73,7 @@ function sizeof() {
   fi
 }
 
-# Serve a directory via http, optionally specifying the port
+# serve directory via http, optionally specifying the port
 function server() {
   local port="${1:-3000}"
   open "http://localhost:${port}/" &
