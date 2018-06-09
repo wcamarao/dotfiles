@@ -18,4 +18,3 @@ for directory in *; do
     cd ..
   fi
 done
-

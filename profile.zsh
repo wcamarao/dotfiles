@@ -56,4 +56,3 @@ function server() {
   open "http://localhost:${port}/" &
   python -m SimpleHTTPServer ${port}
 }
-
