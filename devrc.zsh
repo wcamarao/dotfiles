@@ -19,12 +19,14 @@ precmd() {
 
 # utils
 alias g=git
+alias r=redis-cli
 alias json='python -m json.tool'
 alias urlen='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
 
 # projects
 alias cdc='cd $GOPATH/src/github.com/curated'
+alias cdd='cd $GOPATH/src/github.com/dotnews'
 alias cdp='cd $HOME/Projects'
 alias cdw='cd $GOPATH/src/github.com/wcamarao'
 alias pg='docker exec -it $(docker ps -a -f name=postgres --no-trunc -q) bash -c "psql -U postgres"'

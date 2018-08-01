@@ -25,11 +25,13 @@
   },
   "protoc": {
     "path": "/usr/local/bin/protoc",
-    "options": ["--proto_path=${workspaceRoot}/common/proto"]
+    "options": [
+      "--proto_path=${workspaceRoot}/common/proto"
+    ]
   },
   "search.exclude": {
     "**/bower_components": true,
     "**/node_modules": true,
     "**/vendor": true
-  }
+  },
 }
