@@ -11,7 +11,7 @@
   "html.format.endWithNewline": true,
   "prettier.disableLanguages": ["yaml"],
   "python.formatting.provider": "none",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "newUntitledFile",
