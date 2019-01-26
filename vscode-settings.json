@@ -6,11 +6,8 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
-  "extensions.ignoreRecommendations": false,
   "files.trimTrailingWhitespace": true,
   "html.format.endWithNewline": true,
-  "prettier.disableLanguages": ["yaml"],
-  "python.formatting.provider": "none",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "doubleClick",
@@ -23,10 +20,6 @@
     "**/bower_components": true,
     "**/node_modules": true,
     "**/vendor": true
-  },
-  "protoc": {
-    "path": "/usr/local/bin/protoc",
-    "options": ["--proto_path=${workspaceRoot}/common/proto"]
   },
   "search.exclude": {
     "**/bower_components": true,

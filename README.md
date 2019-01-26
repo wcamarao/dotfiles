@@ -7,10 +7,11 @@ Install
 
 Symlink
 
-- `ln -s $PWD/devrc.zsh $HOME/.devrc`
-- `ln -s $PWD/gitconfig $HOME/.gitconfig`
-- `ln -s $PWD/vimrc.vim $HOME/.vimrc`
+- `ln -s $PWD/.devrc.sh $HOME/.devrc.sh`
+- `ln -s $PWD/.editorconfig $HOME/.editorconfig`
+- `ln -s $PWD/.gitconfig $HOME/.gitconfig`
+- `ln -s $PWD/.vimrc $HOME/.vimrc`
 - `ln -s $PWD/mg.sh /usr/local/bin/mg`
-- `ln -s $PWD/vscode-settings.json '$HOME/Library/Application Support/Code/User/settings.json'`
+- `ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"`
 
-Add `source .devrc` to `~/.zshrc`
+Add `source .devrc.sh` to `~/.zshrc`

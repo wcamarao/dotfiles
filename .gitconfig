@@ -11,8 +11,10 @@
   br = branch -v
   ci = commit -v
   co = checkout
-  dc = diff --word-diff=color --cached
-  df = diff --word-diff=color
+  dc = diff --cached
+  dcc = diff --cached --word-diff=color
+  df = diff
+  dff = diff --word-diff=color
   dt = diff-tree --no-commit-id --name-only -r
   fr = !git fetch --all && git rebase origin/master
   gp = grep --break --heading
