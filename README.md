@@ -2,13 +2,13 @@
 
 Install
 
-- https://www.iterm2.com/
+- https://www.iterm2.com
 - https://github.com/robbyrussell/oh-my-zsh
+- https://code.visualstudio.com
 
 Symlink
 
 - `ln -s $PWD/.devrc.sh $HOME/.devrc.sh`
-- `ln -s $PWD/.editorconfig $HOME/.editorconfig`
 - `ln -s $PWD/.gitconfig $HOME/.gitconfig`
 - `ln -s $PWD/.vimrc $HOME/.vimrc`
 - `ln -s $PWD/mg.sh /usr/local/bin/mg`
