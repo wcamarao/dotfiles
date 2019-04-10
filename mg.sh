@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]; then
   echo "Usage: $0 <git-command>"
-  echo 'Run a git command on every subdirectory that is a git repository'
+  echo 'Run a git command in every subdirectory that is a git repository'
   exit 0
 fi
 
