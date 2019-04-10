@@ -12,6 +12,16 @@ Symlink
 - `ln -s $PWD/.gitconfig $HOME/.gitconfig`
 - `ln -s $PWD/.vimrc $HOME/.vimrc`
 - `ln -s $PWD/mg.sh /usr/local/bin/mg`
+- `ln -s $PWD/mm.sh /usr/local/bin/mm`
 - `ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"`
 
-Add `source .devrc.sh` to `~/.zshrc`
+Add `source $HOME/.devrc.sh` to `~/.zshrc`
+
+VSCode Extensions
+
+- Docker
+- EditorConfig
+- Go
+- Subword Navigation
+- Terraform
+- vscode-viml-syntax
