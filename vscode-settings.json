@@ -25,5 +25,6 @@
     "**/bower_components": true,
     "**/node_modules": true,
     "**/vendor": true
-  }
+  },
+  "go.useLanguageServer": true
 }
