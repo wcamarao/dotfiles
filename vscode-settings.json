@@ -7,8 +7,10 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": false,
   "html.format.endWithNewline": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "newUntitledFile",
@@ -25,6 +27,5 @@
     "**/bower_components": true,
     "**/node_modules": true,
     "**/vendor": true
-  },
-  "go.useLanguageServer": true
+  }
 }
