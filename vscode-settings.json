@@ -32,8 +32,10 @@
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
-    "exclude": [
-      "**/*"
-    ]
-  }
+    "exclude": ["**/*"]
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": ["./ui-engage"]
 }
