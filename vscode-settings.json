@@ -37,5 +37,8 @@
   "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
-  "eslint.workingDirectories": ["./ui-engage"]
+  "eslint.workingDirectories": [
+    "./ui-engage"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "never"
 }
