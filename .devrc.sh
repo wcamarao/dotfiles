@@ -19,6 +19,7 @@ precmd() {
 # utils
 alias g=git
 alias m=make
+alias ya=yarn
 alias json='python -m json.tool'
 alias urlen='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias lsports='lsof -i -n -P |head -1 && lsof -i -n -P |grep --color=never LISTEN'
