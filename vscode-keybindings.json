@@ -1,0 +1,47 @@
+[
+  {
+    "key": "cmd+alt+[",
+    "command": "editor.fold"
+  },
+  {
+    "key": "cmd+alt+]",
+    "command": "editor.unfold"
+  },
+  {
+    "key": "cmd+shift+[",
+    "command": "editor.foldAll"
+  },
+  {
+    "key": "cmd+shift+]",
+    "command": "editor.unfoldAll"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+g",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+alt+0",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.focusSideBar"
+  }
+]

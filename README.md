@@ -14,6 +14,7 @@ Symlink
 - `ln -s $PWD/mg.sh /usr/local/bin/mg`
 - `ln -s $PWD/mm.sh /usr/local/bin/mm`
 - `ln -s $PWD/my.sh /usr/local/bin/my`
+- `ln -s $PWD/vscode-keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"`
 - `ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"`
 
 Add `source $HOME/.devrc.sh` to `~/.zshrc`
