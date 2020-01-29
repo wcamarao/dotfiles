@@ -3,6 +3,9 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
@@ -10,6 +13,7 @@
   "go.formatTool": "goimports",
   "go.useLanguageServer": false,
   "html.format.endWithNewline": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "window.zoomLevel": 2,
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "doubleClick",
@@ -18,6 +22,12 @@
     "editor.insertSpaces": false,
     "editor.tabSize": 4
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.workingDirectories": [
+    "./ui-engage"
+  ],
   "files.exclude": {
     "**/bower_components": true,
     "**/node_modules": true,
@@ -32,13 +42,8 @@
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
-    "exclude": ["**/*"]
-  },
-  "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.packageManager": "yarn",
-  "eslint.workingDirectories": [
-    "./ui-engage"
-  ],
-  "javascript.updateImportsOnFileMove.enabled": "never"
+    "exclude": [
+      "**/*"
+    ]
+  }
 }
