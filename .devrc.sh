@@ -18,7 +18,7 @@ precmd() {
 
 # utils
 alias g=git
-alias m=mmake
+alias m=make
 alias ya=yarn
 alias json='python -m json.tool'
 alias urlen='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
