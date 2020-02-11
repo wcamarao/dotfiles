@@ -4,7 +4,6 @@
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -25,9 +24,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.workingDirectories": [
-    "./ui-engage"
-  ],
   "files.exclude": {
     "**/bower_components": true,
     "**/node_modules": true,
@@ -40,10 +36,7 @@
     "**/vendor": true
   },
   "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
-    "exclude": [
-      "**/*"
-    ]
+    "enabled": true,
+    "liveIndexing": true
   }
 }
