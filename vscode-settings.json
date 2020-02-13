@@ -35,7 +35,11 @@
     "**/vendor": true
   },
   "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false
+  },
+  "terraform.languageServer": {
     "enabled": true,
-    "liveIndexing": true
+    "args": []
   }
 }
