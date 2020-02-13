@@ -30,7 +30,6 @@
     "**/vendor": true
   },
   "search.exclude": {
-    "**/.history": true,
     "**/bower_components": true,
     "**/node_modules": true,
     "**/vendor": true
