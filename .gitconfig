@@ -15,7 +15,7 @@
   dcc = diff --cached --word-diff=color
   df = diff
   dff = diff --word-diff=color
-  dt = diff-tree --no-commit-id --name-only -r
+  dt = diff-tree --no-commit-id --stat -r
   fr = !git fetch --all && git rebase origin/master
   gp = grep --break --heading
   ln = !git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr
