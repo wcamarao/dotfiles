@@ -10,7 +10,7 @@
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
   "go.formatTool": "goimports",
-  "go.useLanguageServer": false,
+  "go.useLanguageServer": true,
   "html.format.endWithNewline": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "window.zoomLevel": 2,
