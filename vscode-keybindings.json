@@ -43,5 +43,9 @@
   {
     "key": "cmd+9",
     "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "vscode-postgres.runQuery"
   }
 ]
