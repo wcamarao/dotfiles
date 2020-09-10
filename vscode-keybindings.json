@@ -43,5 +43,10 @@
   {
     "key": "cmd+9",
     "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
   }
 ]
