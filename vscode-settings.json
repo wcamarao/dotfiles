@@ -41,5 +41,6 @@
   "terraform.languageServer": {
     "enabled": true,
     "args": []
-  }
+  },
+  "workbench.editor.untitled.hint": "hidden"
 }
