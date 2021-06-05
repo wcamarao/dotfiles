@@ -42,5 +42,6 @@
     "enabled": true,
     "args": []
   },
-  "workbench.editor.untitled.hint": "hidden"
+  "workbench.editor.untitled.hint": "hidden",
+  "go.toolsManagement.autoUpdate": true
 }
