@@ -43,5 +43,27 @@
     "args": []
   },
   "workbench.editor.untitled.hint": "hidden",
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.colorTheme": "Default Light+",
+  "editor.tokenColorCustomizations": {
+    "comments": "#777",
+    "functions": "#d70",
+    "keywords": "#a0a",
+    "numbers": "#f0f",
+    "strings": "#070",
+    "variables": "#037",
+    "types": "#30f",
+    "textMateRules": [
+      {
+        "scope": [
+          "constant.language",
+          "variable.language",
+          "keyword.operator.new"
+          ],
+        "settings": {
+          "foreground": "#a0a"
+        }
+      }
+    ]
+  }
 }
