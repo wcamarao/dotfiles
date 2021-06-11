@@ -3,18 +3,19 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
-  "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "yarn",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
   "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "html.format.endWithNewline": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "window.zoomLevel": 2,
+  "workbench.colorTheme": "Default Light+",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "newUntitledFile",
   "[go]": {
@@ -25,45 +26,153 @@
     "source.fixAll.eslint": true
   },
   "files.exclude": {
-    "**/bower_components": true,
     "**/node_modules": true,
-    "**/vendor": true
   },
   "search.exclude": {
-    "**/bower_components": true,
     "**/node_modules": true,
-    "**/vendor": true
   },
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false
-  },
-  "terraform.languageServer": {
-    "enabled": true,
-    "args": []
-  },
-  "workbench.editor.untitled.hint": "hidden",
-  "go.toolsManagement.autoUpdate": true,
-  "workbench.colorTheme": "Default Light+",
   "editor.tokenColorCustomizations": {
     "comments": "#777",
     "functions": "#d70",
     "keywords": "#a0a",
     "numbers": "#f0f",
     "strings": "#070",
-    "variables": "#037",
     "types": "#30f",
+    "variables": "#037",
     "textMateRules": [
       {
         "scope": [
           "constant.language",
+          "keyword.operator.alignas",
+          "keyword.operator.alignof",
+          "keyword.operator.cast",
+          "keyword.operator.expression",
+          "keyword.operator.instanceof",
+          "keyword.operator.logical.python",
+          "keyword.operator.new",
+          "keyword.operator.sizeof",
+          "keyword.operator.typeid",
+          "keyword.operator.wordlike",
           "variable.language",
-          "keyword.operator.new"
           ],
         "settings": {
           "foreground": "#a0a"
         }
-      }
+      },
+      {
+        "scope": [
+          "string.unquoted.plain.in.yaml",
+          "string.unquoted.plain.out.yaml",
+          "string.unquoted.block.yaml",
+          "string.quoted.single.yaml",
+          "string.quoted.double.xml",
+          "string.quoted.single.xml",
+          "string.unquoted.cdata.xml",
+          "string.quoted.double.html",
+          "string.quoted.single.html",
+          "string.unquoted.html",
+        ],
+        "settings": {
+          "foreground": "#070"
+        }
+      },
+      {
+        "scope": [
+          "variable.other.constant",
+          "variable.other.enummember"
+        ],
+        "settings": {
+          "foreground": "#07f"
+        }
+      },
+      {
+        "scope": [
+          "storage.type.numeric.go",
+          "storage.type.byte.go",
+          "storage.type.boolean.go",
+          "storage.type.string.go",
+          "storage.type.uintptr.go",
+          "storage.type.error.go",
+          "storage.type.rune.go",
+        ],
+        "settings": {
+          "foreground": "#07f"
+        }
+      },
+      {
+        "scope": [
+          "constant.character.character-class.regexp",
+          "constant.character.escape",
+          "constant.character.set.regexp",
+          "constant.other.character-class.regexp",
+          "constant.other.character-class.set.regexp",
+          "keyword.control.anchor.regexp",
+          "keyword.operator.negation.regexp",
+          "keyword.operator.or.regexp",
+          "keyword.operator.quantifier.regexp",
+          "punctuation.character.set.begin.regexp",
+          "punctuation.character.set.end.regexp",
+          "punctuation.definition.character-class.regexp",
+          "punctuation.definition.group.assertion.regexp",
+          "punctuation.definition.group.regexp",
+          "support.other.parenthesis.regexp",
+          ],
+        "settings": {
+          "foreground": "#f0f"
+        }
+      },
+      {
+        "scope": [
+          "string.regexp",
+        ],
+        "settings": {
+          "foreground": "#07f"
+        }
+      },
+      {
+        "scope": [
+          "entity.name.tag",
+          "punctuation.definition.tag",
+        ],
+        "settings": {
+          "foreground": "#30f"
+        }
+      },
+      {
+        "scope": [
+          "entity.other.attribute-name.class.css",
+          "entity.other.attribute-name.class.mixin.css",
+          "entity.other.attribute-name.id.css",
+          "entity.other.attribute-name.parent-selector.css",
+          "entity.other.attribute-name.pseudo-class.css",
+          "entity.other.attribute-name.pseudo-element.css",
+          "source.css.less entity.other.attribute-name.id",
+          "entity.other.attribute-name",
+        ],
+        "settings": {
+          "foreground": "#07f"
+        }
+      },
+      {
+        "scope": [
+          "support.type.vendored.property-name",
+          "support.type.property-name",
+          "variable.css",
+          "variable.scss",
+          "variable.other.less",
+        ],
+        "settings": {
+          "foreground": "#037"
+        }
+      },
+      {
+        "scope": [
+          "keyword.other.unit",
+        ],
+        "settings": {
+          "foreground": "#07f"
+        }
+      },
     ]
   }
 }
