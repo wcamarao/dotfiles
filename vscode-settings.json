@@ -12,7 +12,7 @@
   "go.useLanguageServer": true,
   "html.format.endWithNewline": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.hint": "hidden",
