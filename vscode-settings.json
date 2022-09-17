@@ -1,4 +1,6 @@
 {
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.bracketPairColorization.enabled": false,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -11,25 +13,50 @@
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "html.format.endWithNewline": true,
+  "html.format.wrapLineLength": 0,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "newUntitledFile",
-  "[go]": {
-    "editor.insertSpaces": false,
-    "editor.tabSize": 4
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "files.exclude": {
-    "**/node_modules": true,
+    "**/node_modules": true
   },
   "search.exclude": {
-    "**/node_modules": true,
+    "**/node_modules": true
+  },
+  "customLocalFormatters.formatters": [
+    {
+      "command": "terraform fmt --write=false --list=false --diff=false -",
+      "languages": ["tf"]
+    }
+  ],
+  "files.associations": {
+    "*.xml": "html",
+    "*.svg": "html"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#777",
@@ -53,8 +80,8 @@
           "keyword.operator.sizeof",
           "keyword.operator.typeid",
           "keyword.operator.wordlike",
-          "variable.language",
-          ],
+          "variable.language"
+        ],
         "settings": {
           "foreground": "#a0a"
         }
@@ -70,17 +97,14 @@
           "string.unquoted.cdata.xml",
           "string.quoted.double.html",
           "string.quoted.single.html",
-          "string.unquoted.html",
+          "string.unquoted.html"
         ],
         "settings": {
           "foreground": "#070"
         }
       },
       {
-        "scope": [
-          "variable.other.constant",
-          "variable.other.enummember"
-        ],
+        "scope": ["variable.other.constant", "variable.other.enummember"],
         "settings": {
           "foreground": "#07f"
         }
@@ -93,7 +117,7 @@
           "storage.type.string.go",
           "storage.type.uintptr.go",
           "storage.type.error.go",
-          "storage.type.rune.go",
+          "storage.type.rune.go"
         ],
         "settings": {
           "foreground": "#07f"
@@ -115,25 +139,20 @@
           "punctuation.definition.character-class.regexp",
           "punctuation.definition.group.assertion.regexp",
           "punctuation.definition.group.regexp",
-          "support.other.parenthesis.regexp",
-          ],
+          "support.other.parenthesis.regexp"
+        ],
         "settings": {
           "foreground": "#f0f"
         }
       },
       {
-        "scope": [
-          "string.regexp",
-        ],
+        "scope": ["string.regexp"],
         "settings": {
           "foreground": "#07f"
         }
       },
       {
-        "scope": [
-          "entity.name.tag",
-          "punctuation.definition.tag",
-        ],
+        "scope": ["entity.name.tag", "punctuation.definition.tag"],
         "settings": {
           "foreground": "#30f"
         }
@@ -147,7 +166,7 @@
           "entity.other.attribute-name.pseudo-class.css",
           "entity.other.attribute-name.pseudo-element.css",
           "source.css.less entity.other.attribute-name.id",
-          "entity.other.attribute-name",
+          "entity.other.attribute-name"
         ],
         "settings": {
           "foreground": "#07f"
@@ -159,29 +178,18 @@
           "support.type.property-name",
           "variable.css",
           "variable.scss",
-          "variable.other.less",
+          "variable.other.less"
         ],
         "settings": {
           "foreground": "#037"
         }
       },
       {
-        "scope": [
-          "keyword.other.unit",
-        ],
+        "scope": ["keyword.other.unit"],
         "settings": {
           "foreground": "#07f"
         }
-      },
+      }
     ]
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
   }
 }
