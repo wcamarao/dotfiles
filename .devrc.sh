@@ -72,5 +72,5 @@ function sizeof() {
 function server() {
   local port="${1:-3000}"
   open "http://localhost:${port}/" &
-  python -m SimpleHTTPServer ${port}
+  python3 -m http.server ${port}
 }
