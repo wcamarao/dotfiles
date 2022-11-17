@@ -36,7 +36,6 @@
     }
   ],
   "files.associations": {
-    "*.css": "tailwindcss",
     "*.xml": "html",
     "*.svg": "html"
   },
