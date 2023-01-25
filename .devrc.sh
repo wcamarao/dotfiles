@@ -1,5 +1,4 @@
-# nocorrect
-# noglob
+#!/bin/zsh
 
 # vim
 export EDITOR="vim"
