@@ -19,12 +19,12 @@
   "html.format.wrapLineLength": 0,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.colorTheme": "Default Light+",
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.untitled.hint": "hidden",
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "newUntitledFile",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "files.exclude": {
     "**/node_modules": true
@@ -39,8 +39,9 @@
     }
   ],
   "files.associations": {
-    "*.xml": "html",
-    "*.svg": "html"
+    "*.hcl": "atlas-config",
+    "*.svg": "html",
+    "*.xml": "html"
   },
   "[go]": {
     "editor.insertSpaces": false,
