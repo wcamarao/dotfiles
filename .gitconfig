@@ -24,5 +24,3 @@
   ls = log --stat
   sl = shortlog -sn
   st = status -sb
-[url "ssh://github.com/"]
-	insteadOf = https://github.com/
