@@ -39,7 +39,6 @@
     }
   ],
   "files.associations": {
-    "*.hcl": "atlas-config",
     "*.svg": "html",
     "*.xml": "html"
   },
@@ -69,6 +68,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.tokenColorCustomizations": {
@@ -187,11 +189,13 @@
       },
       {
         "scope": [
-          "support.type.vendored.property-name",
-          "support.type.property-name",
+          "variable.argument.css",
           "variable.css",
           "variable.scss",
-          "variable.other.less"
+          "variable.other.less",
+          "variable.other.property.ts",
+          "support.type.property-name",
+          "support.type.vendored.property-name"
         ],
         "settings": {
           "foreground": "#037"
@@ -204,5 +208,6 @@
         }
       }
     ]
-  }
+  },
+  "explorer.confirmPasteNative": false
 }
