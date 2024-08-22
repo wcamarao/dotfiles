@@ -4,10 +4,12 @@
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
   "go.buildTags": "integration",
@@ -208,6 +210,5 @@
         }
       }
     ]
-  },
-  "explorer.confirmPasteNative": false
+  }
 }
