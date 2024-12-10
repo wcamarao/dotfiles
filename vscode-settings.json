@@ -42,7 +42,9 @@
   ],
   "files.associations": {
     "*.svg": "html",
-    "*.xml": "html"
+    "*.xml": "html",
+    "*.sql": "postgres",
+    "*.hcl": "c"
   },
   "[go]": {
     "editor.insertSpaces": false,
