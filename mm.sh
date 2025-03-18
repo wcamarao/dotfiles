@@ -15,7 +15,7 @@ for directory in *; do
 
       if [ ! -z "$VAL" ]; then
         echo "\n${directory}"
-        m $@
+        m "$@"
       fi
     fi
 

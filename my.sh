@@ -12,7 +12,7 @@ for directory in *; do
 
     if [ -f "yarn.lock" ]; then
       echo "\n${directory}"
-      yarn $@
+      yarn "$@"
     fi
 
     cd ..

@@ -12,7 +12,7 @@ for directory in *; do
 
     if [ -d .git ]; then
       echo "\n${directory}"
-      git $@
+      git "$@"
     fi
 
     cd ..
