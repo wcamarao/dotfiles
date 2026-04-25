@@ -48,5 +48,9 @@
     "key": "cmd+r",
     "command": "editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+/",
+    "command": "git.blame.toggleEditorDecoration"
   }
 ]

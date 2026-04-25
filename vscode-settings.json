@@ -1,4 +1,5 @@
 {
+  "diffEditor.maxComputationTime": 0,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.detectIndentation": false,
@@ -12,6 +13,8 @@
   "explorer.confirmPasteNative": false,
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
+  "git.blame.editorDecoration.enabled": false,
+  "git.blame.statusBarItem.enabled": true,
   "go.buildTags": "integration",
   "go.formatTool": "goimports",
   "go.lintFlags": ["--fast"],
@@ -20,18 +23,28 @@
   "go.useLanguageServer": true,
   "html.format.wrapLineLength": 0,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Light+",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "doubleClick",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.startupEditor": "newUntitledFile",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "files.associations": {
+    "*.svg": "html",
+    "*.xml": "html",
+    "*.sql": "postgres"
+  },
   "files.exclude": {
+    "dist": true,
+    ".next": true,
     "**/node_modules": true
   },
   "search.exclude": {
+    "dist": true,
+    ".next": true,
     "**/node_modules": true
   },
   "customLocalFormatters.formatters": [
@@ -40,42 +53,42 @@
       "languages": ["tf"]
     }
   ],
-  "files.associations": {
-    "*.svg": "html",
-    "*.xml": "html",
-    "*.sql": "postgres",
-    "*.hcl": "c"
+  "[tf]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
   },
   "[go]": {
     "editor.insertSpaces": false,
     "editor.tabSize": 4
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#777",
