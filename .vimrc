@@ -1,13 +1,7 @@
 filetype plugin indent on
 syntax on
-colo slate
-
-cd ~/Projects
 
 set number                        " show line numbers
-set wildignore+=**/node_modules   " ignores node_modules
-set wildignore+=**/spec/reports   " ignores spec/reports
-set wildignore+=**/tmp/cache      " ignores tmp/cache
 set wildignore+=*.pyc             " ignores *.pyc
 set ruler                         " show current position
 set showmode                      " show what mode we're currently editing in
@@ -58,7 +52,7 @@ nnoremap ; :
 nnoremap <CR> :noh<CR>:<CR>
 
 "format json (leader + j)
-nmap <silent> <Leader>j :%!python -m json.tool<CR>
+nmap <silent> <Leader>j :%!python3 -m json.tool<CR>
 
 "close all open buffers
 nmap <silent> <Leader>x :bd *<C-a><CR>
@@ -110,8 +104,3 @@ function! g:MoveLineDown()
     normal ddp
   endif
 endfunction
-
-"ignore F1
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>

@@ -1,0 +1,18 @@
+{
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.detectIndentation": false,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "files.trimTrailingWhitespace": true,
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.colorTheme": "Dark+",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.startupEditor": "newUntitledFile"
+}
