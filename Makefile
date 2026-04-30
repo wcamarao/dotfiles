@@ -5,8 +5,8 @@ install:
 	@ln -sf $(PWD)/.vimrc $(HOME)/.vimrc
 
 	@mkdir -p $(HOME)/.local/bin
-	@ln -sf $(PWD)/bin/xg $(HOME)/.local/bin/xg
-	@ln -sf $(PWD)/bin/xm $(HOME)/.local/bin/xm
+	@ln -sf $(PWD)/bin/mg $(HOME)/.local/bin/mg
+	@ln -sf $(PWD)/bin/mm $(HOME)/.local/bin/mm
 
 	@mkdir -p "$(HOME)/Library/Application Support/Code/User"
 	@ln -sf $(PWD)/vscode/keybindings.json "$(HOME)/Library/Application Support/Code/User/keybindings.json"

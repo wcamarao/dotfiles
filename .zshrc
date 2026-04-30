@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 export EDITOR="vim"
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/go/bin
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 alias m=make
 alias t=terraform
