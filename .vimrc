@@ -8,7 +8,7 @@ set showmode                      " show what mode we're currently editing in
 set showmatch                     " show matching brackets
 set list                          " show hidden chars
 set listchars=tab:▸\ ,eol:¬       " chars to be shown
-set clipboard+=unnamed            " yanks to clipboard
+set clipboard+=unnamedplus        " yanks to clipboard
 
 set noswapfile                    " no sw?s
 set visualbell                    " no beeps
