@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 export EDITOR="vim"
-export PATH=$PATH:$HOME/.bin
+export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/go/bin
 
 alias m=make
