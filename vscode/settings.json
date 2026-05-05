@@ -13,6 +13,5 @@
     "workbench.colorTheme": "Dark+",
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.enablePreview": false,
-    "workbench.list.openMode": "doubleClick",
     "workbench.startupEditor": "newUntitledFile"
 }
